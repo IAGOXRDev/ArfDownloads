@@ -1,0 +1,254 @@
+WorldScripts
+GameObject
+Playlist Data
+!ftraceLightmaps
+MeshBaker (0)
+Main Camera
+PopcornPalace -- Scale /VRCLightVolumes
+PopcornPalace -- Scale /==== PATREON ====
+PopcornPalace -- Scale /Enable untrusted url blocker
+PopcornPalace -- Scale /Particle System
+PopcornPalace -- Scale /==== MAP ====/Enable untrusted url blocker
+PopcornPalace -- Scale /==== MAP ====/==== PARTICLES ====
+PopcornPalace -- Scale /==== MAP ====/==== PLUSHIES ====
+PopcornPalace -- Scale /==== MAP ====/==== LIGHTS / PROBES ====
+PopcornPalace -- Scale /==== MAP ====/==== GAMES / PREFABS ====
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Couches Lamps Main
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Lamps Hall
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Lights
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Lights2
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Lights Main Yellow
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Balcony
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Little Emitters
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Glass
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Balcony Light
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Metallic frames
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Couches Frames n Top
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Pillows
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Pillows Second
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Wooden Stuff
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Board
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Foams
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Cubes
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Light Stuff
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/PC and Mettalic Things
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Fruits!
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Center table
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Vases
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Trash Can
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Dirt
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Ferns
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Ferns2
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Cube.091 (1)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/GS Red poppy 01
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Brocker Entrance (Open)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Blocker Entrance
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/NurbsPath.007
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/NurbsPath.008
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Popcorn Icon
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Blankie
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Blankies
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Windows
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Windows Back
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Glass UI
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Text.006
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Logo
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Plane (1)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Patreon Canvas
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Performance helper (apparently people do)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/jasgjkbasjgbkjnasg
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Board Zelf
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Creators
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Buyysapopcorn
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/ChalkUpdates
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Light Volume Spawn1
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Light Volume Spawn2
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Spawn 1.1/Reflection Probes
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Corridor1 New/Cube.190
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Corridor1 New/Cube.202
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Corridor1 New/Cube.211
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Corridor1 New/Cube.213
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Corridor1 New/Cube.269
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Corridor1 New/Cube.272
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Corridor1 New/Cube.299
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Corridor1 New/Cube.302
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Corridor1 New/Cube.303
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Corridor1 New/Cube.306
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Corridor1 New/Cylinder.081
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Corridor1 New/Cylinder.089
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Corridor1 New/Cylinder.092
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Corridor1 New/Cylinder.096
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Corridor1 New/PostersContainer4_Mainroom
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Corridor1 New/Light Volume Corridor1
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Corridor1 New/Reflection Probe Corridor
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Cube.003
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Cube.063
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Cube.160
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Cube.236
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Cube.239
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Cube.250
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Cube.254
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Cube.265
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Cube.280
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Cube.286
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Cube.287
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Cube.331
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Cube.345
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Cylinder.098
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Cylinder. 111
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Icosphere.002
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/NurbsPath.006
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Plane.029
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Plane.141
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Plane.142
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Plane.144
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/tree.002
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/tree.019
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Sheets_LOD1
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Ivy04
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Ivy08
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Ivy08 (1)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Ivy01
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Ivy01 (1)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Ivy 10
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Ivy10 (1)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/PostersContainer5_1stRoom
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Plants_Vase1 (1)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Plants_Vase4 (1)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Light Volume 1stRoom
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Reflection Probe 1stRoom
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/1stRoom New/Brand New
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cube.019
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cube.022
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cube.122
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cube.125
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cube.140
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cube.147
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cube.149
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cube.151
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cube.157
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cube.158
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cube.159
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cube.162
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cube.163
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cylinder.004
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cylinder.044
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cylinder.045
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cylinder.048
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Cylinder.082
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Plane.044
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Plane.048
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Travesseiro.006
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/PostersContainer7_3rdRoom
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Plane (2)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Plane (3)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Light Volume 3rdRoom
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Light Volume 3rd Room Corner
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/3rdRoom 1.1/Reflection Probe 3rd Room
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Rocks outside
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Windows
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Wood
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Metals
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Pink Cubes
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Blue cubes
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Glass Candles
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Candles
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Vases
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Carpet
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Outside terrain
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Trees
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Blankets
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Popcorn Icon
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Curtains
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Sphere comfy
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Bulbs
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Light thing Spiral Bulbs
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Pillows
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/IVYS
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Paticles Private Rooms
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/PrivateRooms/Performance/Reflection Probe PrivateRooms
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.138
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.139
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.141
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.142
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.146
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.156
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.209
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.216
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.219
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.231
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.342
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.343
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.344
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.349
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.350
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.352
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.353
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.355
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cube.371
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cylinder.066
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cylinder.083
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cylinder.091
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cylinder.094
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cylinder.097
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cylinder.099
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cylinder. 100
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cylinder. 101
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cylinder. 103
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Cylinder.107
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Empty
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/NurbsPath
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/NurbsPath.003
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/NurbsPath.004
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/NurbsPath.005
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Plane.001
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Plane.133
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Plane.134
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Plane.135
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Plane.136
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Plane.137
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Plane.138
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Plane.139
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Travesseiro.016
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/tree.026
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/tree.033
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/tree.034
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/New Ivy
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Point Light
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/OtherMenu
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/OtherMenu (2)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/OtherMenu (1)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/gkajwlijkgwaklgajw (1)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/gkajwlljkgwaklgajw (3)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/gkajwlijkgwaklgajw (2)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/PostersContainer13_Gameroom
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Reflection Probes
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/New Gaming Room/Gaming Room
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Cube.008
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Cube.011
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Cube.024
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Cube.034
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Cube.060
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Cube.066
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Cube.074
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Cube.090
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Cube.196
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Cylinder.002
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Cylinder. 114
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Icosphere.003
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Plane.018
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Plane.090
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/FISH MASK (1)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Aquarium (1)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Ivy12 (1)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Ivy12 (2)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Cube.091 (2)
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/PostersContainer6_Aquarium
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Plants_Vase1
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Plants_Vase2
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Plants_Vase3
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Plants_Vase4
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Light Volume Aquarium
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Light Volume Aquarium Corridor
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/Reflection Probe Aquarium
+PopcornPalace -- Scale /==== MAP ====/==== FBX - COLLIDERS ====/Aquarium/RAIN PARTICLE NIGHT (5)
