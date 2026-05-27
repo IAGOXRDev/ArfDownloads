@@ -1,7 +1,10 @@
-# ArfDownloads
+# **ArfHook Downloads**
 
-All the shit ur missing
+All the files Missing from ArfHook
 
-Locking IP on VM
+## VM Stuff
 
+Lock IP VM
+```
 curl -sSL https://raw.githubusercontent.com/IAGOXRDev/ArfDownloads/main/setup.sh | sudo bash
+```
