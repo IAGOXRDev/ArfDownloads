@@ -1,0 +1,37 @@
+=== ARFHOOK MASTER THEME ===
+[TITLE]
+CustomName:   Arf Hook x3
+RainbowActive:True
+
+[IMAGE]
+ShowArfImage:True
+UseCustomImg:False
+ImgPos:10,20
+ImgSize:750,350
+
+[GRID]
+CellSize:176,164
+Spacing:37,47
+Constraint:1
+Pos:512,-524
+ShowNametags:True
+ShowIcons:True
+
+[QL_BUTTONS]
+Button_LiveNow:Hidden
+Button_Worlds:Visible
+Button_Avatars:Visible
+Button_Social:Visible
+Button_ViewGroups:Hidden
+Button_Shop:Hidden
+Button_Arf Hook:Visible
+ArfHookButton:Visible
+
+[HEADER_ICONS]
+Button_QM_Calendar:Hidden
+Button_QM_Inventory:Visible
+Button_QM_Report:Hidden
+Arf_HeaderButton_Panic Mode:Visible
+
+[OTHER]
+VRChat_Ads:Hidden
