@@ -1,35 +1,36 @@
 #!/bin/bash
 
+# Ruta del archivo de configuración de red en AntiX
+INTERFAZ_FILE="/etc/network/interfaces"
+
 # =====================================================================
-# PARTE 1: INSTALADOR (Se ejecuta cuando lanzas el comando con sudo)
+# PARTE 1: INSTALADOR (Solo se ejecuta si entras con sudo desde el curl)
 # =====================================================================
-if [ "$" = "root" ]; then
+if [ "$(id -u)" -eq 0 ]; then
     echo "Instalando el menú de red en el inicio de la VM..."
     
-    # 1. Detectar el usuario real que lanzó el sudo (iagoxr)
+    # Detectar el usuario real que lanzó el sudo (iagoxr)
     REAL_USER=${SUDO_USER:-$USER}
     USER_HOME=$(eval echo ~$REAL_USER)
 
-    # 2. Descargar el script definitivo en la carpeta del usuario
+    # Descargar el script definitivo en la carpeta del usuario
     curl -sSL https://raw.githubusercontent.com/IAGOXRDev/ArfDownloads/main/setup.sh -o "$USER_HOME/menu_red.sh"
     chmod +x "$USER_HOME/menu_red.sh"
     chown $REAL_USER:$REAL_USER "$USER_HOME/menu_red.sh"
 
-    # 3. Añadirlo al .bashrc para que cargue al iniciar sesión (si no está ya)
+    # Añadirlo al .bashrc de forma limpia si no está ya
     if ! grep -q "menu_red.sh" "$USER_HOME/.bashrc"; then
-        echo -e "\n# Lanzar menu de red al iniciar\n~/menu_red.sh" >> "$USER_HOME/.bashrc"
+        echo -e "\n# Lanzar menu de red al iniciar\nif [ -f ~/menu_red.sh ]; then\n    ~/menu_red.sh\nfi" >> "$USER_HOME/.bashrc"
     fi
 
     echo "¡Instalación completada con éxito!"
-    echo "La próxima vez que inicies sesión o arranques la VM, el menú saltará solo."
+    echo "Cierra esta terminal y vuelve a entrar por SSH para probarlo."
     exit 0
 fi
 
 # =====================================================================
-# PARTE 2: EL MENÚ INTERACTIVO (Lo que se ejecuta al iniciar la VM)
+# PARTE 2: EL MENÚ INTERACTIVO (Solo se ejecuta al iniciar sesión)
 # =====================================================================
-INTERFAZ_FILE="/etc/network/interfaces"
-
 while true; do
     clear
     CURRENT_IP=$(ip route get 1 2>/dev/null | awk '{print $7;exit}')
@@ -50,7 +51,10 @@ while true; do
     echo "3. Remove StaticIP"
     echo "4. Exit Menu"
     echo ""
-    read -p "Select an option [1-4]: " OPTION
+    
+    # El truco: Forzamos a 'read' a escuchar el teclado real (/dev/tty) 
+    # por si queda algún rastro del pipe de internet de curl
+    read -p "Select an option [1-4]: " OPTION < /dev/tty
 
     case $OPTION in
         1)
@@ -100,7 +104,7 @@ EOF"
             break
             ;;
         *)
-            echo "Opción no válida."
+            echo "Opción no válida: '$OPTION'"
             sleep 1
             ;;
     esac
