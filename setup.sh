@@ -4,32 +4,54 @@
 INTERFAZ_FILE="/etc/network/interfaces"
 
 # =====================================================================
-# PARTE 1: INSTALADOR (Solo se ejecuta si entras con sudo desde el curl)
+# PARTE 1: INSTALADOR (Se ejecuta una sola vez con tu comando curl | sudo bash)
 # =====================================================================
 if [ "$(id -u)" -eq 0 ]; then
     echo "Instalando el menú de red en el inicio de la VM..."
     
-    # Detectar el usuario real que lanzó el sudo (iagoxr)
+    # Detectar el usuario real (iagoxr)
     REAL_USER=${SUDO_USER:-$USER}
     USER_HOME=$(eval echo ~$REAL_USER)
 
-    # Descargar el script definitivo en la carpeta del usuario
+    # 1. Guardar el script en la carpeta del usuario
     curl -sSL https://raw.githubusercontent.com/IAGOXRDev/ArfDownloads/main/setup.sh -o "$USER_HOME/menu_red.sh"
     chmod +x "$USER_HOME/menu_red.sh"
     chown $REAL_USER:$REAL_USER "$USER_HOME/menu_red.sh"
 
-    # Añadirlo al .bashrc de forma limpia si no está ya
-    if ! grep -q "menu_red.sh" "$USER_HOME/.bashrc"; then
-        echo -e "\n# Lanzar menu de red al iniciar\nif [ -f ~/menu_red.sh ]; then\n    ~/menu_red.sh\nfi" >> "$USER_HOME/.bashrc"
+    # 2. Configurar el autoarranque gráfico exclusivo para herbstluftwm
+    HLWM_CONFIG_DIR="$USER_HOME/.config/herbstluftwm"
+    mkdir -p "$HLWM_CONFIG_DIR"
+
+    # Si no existe el archivo autostart de herbstluftwm, creamos uno básico
+    if [ ! -f "$HLWM_CONFIG_DIR/autostart" ]; then
+        # Intentamos copiar el de plantilla de AntiX
+        if [ -f /etc/xdg/herbstluftwm/autostart ]; then
+            cp /etc/xdg/herbstluftwm/autostart "$HLWM_CONFIG_DIR/autostart"
+        else
+            echo "#!/bin/bash" > "$HLWM_CONFIG_DIR/autostart"
+        fi
+        chmod +x "$HLWM_CONFIG_DIR/autostart"
+        chown -R $REAL_USER:$REAL_USER "$HLWM_CONFIG_DIR"
+    fi
+
+    # Inyectamos la orden para que herbstluftwm abra UNA terminal ejecutando el menú en la VM
+    if ! grep -q "menu_red.sh" "$HLWM_CONFIG_DIR/autostart"; then
+        echo -e "\n# Abrir una terminal con el menú de red en la pantalla de la VM\ndesktop-defaults-run-terminal --command \"$USER_HOME/menu_red.sh\" &" >> "$HLWM_CONFIG_DIR/autostart"
+    fi
+
+    # 3. LIMPIEZA IMPORTANTE: Quitamos el script de ~/.bashrc si se había quedado ahí de antes,
+    # para evitar que te salte doble por SSH o que corrompa la consola normal.
+    if [ -f "$USER_HOME/.bashrc" ]; then
+        sed -i '/menu_red.sh/d' "$USER_HOME/.bashrc"
     fi
 
     echo "¡Instalación completada con éxito!"
-    echo "Cierra esta terminal y vuelve a entrar por SSH para probarlo."
+    echo "A partir de ahora, al arrancar la VM en herbstluftwm, se abrirá una terminal con el menú en tu pantalla."
     exit 0
 fi
 
 # =====================================================================
-# PARTE 2: EL MENÚ INTERACTIVO (Solo se ejecuta al iniciar sesión)
+# PARTE 2: EL MENÚ INTERACTIVO (Lo que se abrirá automáticamente dentro de la terminal)
 # =====================================================================
 while true; do
     clear
@@ -52,9 +74,8 @@ while true; do
     echo "4. Exit Menu"
     echo ""
     
-    # El truco: Forzamos a 'read' a escuchar el teclado real (/dev/tty) 
-    # por si queda algún rastro del pipe de internet de curl
-    read -p "Select an option [1-4]: " OPTION < /dev/tty
+    # Escuchamos la entrada estándar de la ventana de la terminal activa
+    read -p "Select an option [1-4]: " OPTION
 
     case $OPTION in
         1)
@@ -100,8 +121,8 @@ EOF"
             sleep 2
             ;;
         4)
-            echo "Saliendo al shell..."
-            break
+            echo "Cerrando ventana..."
+            exit 0
             ;;
         *)
             echo "Opción no válida: '$OPTION'"
