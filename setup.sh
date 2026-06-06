@@ -1,59 +1,107 @@
 #!/bin/bash
 
-# 1. Asegurar que el script se ejecute como root
-if [ "$EUID" -ne 0 ]; then
-  echo "Por favor, ejecuta este script como root (usando sudo)."
-  exit 1
+# =====================================================================
+# PARTE 1: INSTALADOR (Se ejecuta cuando lanzas el comando con sudo)
+# =====================================================================
+if [ "$" = "root" ]; then
+    echo "Instalando el menú de red en el inicio de la VM..."
+    
+    # 1. Detectar el usuario real que lanzó el sudo (iagoxr)
+    REAL_USER=${SUDO_USER:-$USER}
+    USER_HOME=$(eval echo ~$REAL_USER)
+
+    # 2. Descargar el script definitivo en la carpeta del usuario
+    curl -sSL https://raw.githubusercontent.com/IAGOXRDev/ArfDownloads/main/setup.sh -o "$USER_HOME/menu_red.sh"
+    chmod +x "$USER_HOME/menu_red.sh"
+    chown $REAL_USER:$REAL_USER "$USER_HOME/menu_red.sh"
+
+    # 3. Añadirlo al .bashrc para que cargue al iniciar sesión (si no está ya)
+    if ! grep -q "menu_red.sh" "$USER_HOME/.bashrc"; then
+        echo -e "\n# Lanzar menu de red al iniciar\n~/menu_red.sh" >> "$USER_HOME/.bashrc"
+    fi
+
+    echo "¡Instalación completada con éxito!"
+    echo "La próxima vez que inicies sesión o arranques la VM, el menú saltará solo."
+    exit 0
 fi
 
-echo "=== 1. Instalando y configurando OpenSSH Server ==="
-# Actualizar lista de paquetes e instalar SSH de forma silenciosa
-apt update && apt install -y openssh-server
+# =====================================================================
+# PARTE 2: EL MENÚ INTERACTIVO (Lo que se ejecuta al iniciar la VM)
+# =====================================================================
+INTERFAZ_FILE="/etc/network/interfaces"
 
-# Asegurar que el servicio esté activo y arranque con el sistema
-systemctl enable --now ssh
+while true; do
+    clear
+    CURRENT_IP=$(ip route get 1 2>/dev/null | awk '{print $7;exit}')
+    [ -z "$CURRENT_IP" ] && CURRENT_IP="Sin conexión"
 
-echo "=== 2. Detectando IP actual de la VM ==="
-# Detectar la IP actual de la interfaz eth0
-IP_ACTUAL=$(ip -o -4 addr show dev eth0 | awk '{print $4}')
+    if grep -q "iface .* static" "$INTERFAZ_FILE" 2>/dev/null; then
+        STATUS="Enabled"
+    else
+        STATUS="Disabled"
+    fi
 
-if [ -z "$IP_ACTUAL" ]; then
-  echo "Error: No se pudo detectar una IP activa en la interfaz eth0."
-  exit 1
-fi
+    echo "================================================="
+    echo " [Your IP: $CURRENT_IP][IPStatic Status: $STATUS]"
+    echo "================================================="
+    echo ""
+    echo "1. Restart VM"
+    echo "2. Apply StaticIP"
+    echo "3. Remove StaticIP"
+    echo "4. Exit Menu"
+    echo ""
+    read -p "Select an option [1-4]: " OPTION
 
-echo "=== 3. Actualizando configuración de Netplan ==="
-# Sobrescribir el archivo de Netplan
-cat << EOF > /etc/netplan/01-netcfg.yaml
-# This file describes the network interfaces available on your system
-# For more information, see netplan(5).
-network:
-  version: 2
-  renderer: networkd
-  ethernets:
-    eth0:
-      dhcp4: no
-      addresses:
-        - $IP_ACTUAL
-      routes:
-        - to: default
-          via: 192.168.1.1
-      nameservers:
-        addresses: [8.8.8.8, 1.1.1.1]
-EOF
+    case $OPTION in
+        1)
+            echo "Reiniciando la máquina..."
+            sleep 1
+            sudo reboot
+            ;;
+        2)
+            echo "Aplicando configuración de IP Estática..."
+            sudo cp "$INTERFAZ_FILE" "${INTERFAZ_FILE}.bak"
+            IFACE=$(ip route show default | awk '{print $5}')
+            GATEWAY=$(ip route show default | awk '{print $3}')
+            
+            sudo bash -c "cat <<EOF > $INTERFAZ_FILE
+auto lo
+iface lo inet loopback
 
-# Aplicar los cambios
-netplan apply
+auto $IFACE
+iface $IFACE inet static
+    address $CURRENT_IP
+    netmask 255.255.255.0
+    gateway $GATEWAY
+    dns-nameservers 8.8.8.8 1.1.1.1
+EOF"
+            sudo ifdown $IFACE && sudo ifup $IFACE
+            echo "¡IP Estática aplicada!"
+            sleep 2
+            ;;
+        3)
+            echo "Removiendo configuración estática (DHCP)..."
+            IFACE=$(ip route show default | awk '{print $5}')
+            [ -z "$IFACE" ] && IFACE=$(awk '/iface/ {print $2}' $INTERFAZ_FILE | grep -v "lo" | head -n 1)
 
-# Limpiar posibles archivos temporales molestos de nano si existieran
-if [ -f /etc/netplan/.01-netcfg.yaml.swp ]; then
-  rm /etc/netplan/.01-netcfg.yaml.swp
-fi
+            sudo bash -c "cat <<EOF > $INTERFAZ_FILE
+auto lo
+iface lo inet loopback
 
-echo "=================================================="
-echo "          ¡PROCESO COMPLETADO CON ÉXITO!          "
-echo "=================================================="
-echo " La IP estática configurada en la VM es:"
-echo " >> $IP_ACTUAL <<"
-echo " El servicio SSH ya está activo en esta IP."
-echo "=================================================="
+auto $IFACE
+iface $IFACE inet dhcp
+EOF"
+            sudo ifdown $IFACE && sudo ifup $IFACE
+            echo "¡Volviendo a DHCP!"
+            sleep 2
+            ;;
+        4)
+            echo "Saliendo al shell..."
+            break
+            ;;
+        *)
+            echo "Opción no válida."
+            sleep 1
+            ;;
+    esac
+done
