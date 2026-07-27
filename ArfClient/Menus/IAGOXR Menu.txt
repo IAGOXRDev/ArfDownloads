@@ -1,6 +1,6 @@
-ButtonColor:#00BFD9FF
-TitleColor:#F18FE7FF
-TitleBarColor:#0B0B0BFF
+ButtonColor:#C706F8FF
+TitleColor:#ED61DEFF
+TitleBarColor:#040404FF
 ModuleColor:#EC8AEFFF
 Highlight:0.46666655;0.44444445;0.67222226
 Rainbow:False
