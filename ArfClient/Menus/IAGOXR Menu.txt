@@ -1,7 +1,8 @@
-ButtonColor:#D70DFFFF
-TitleColor:#F4B1EDFF
-ModuleColor:#FFFFFFFF
+ButtonColor:#00BFD9FF
+TitleColor:#F18FE7FF
+TitleBarColor:#0B0B0BFF
+ModuleColor:#EC8AEFFF
 Highlight:0.46666655;0.44444445;0.67222226
 Rainbow:False
-BgColor:#171717FF
-BgOpacity:0.67241377
+BgColor:#1A1A1AFF
+BgOpacity:0.6
