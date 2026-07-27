@@ -1,8 +1,10 @@
-ButtonColor:#C706F8FF
-TitleColor:#ED61DEFF
-TitleBarColor:#040404FF
-ModuleColor:#EC8AEFFF
-Highlight:0.46666655;0.44444445;0.67222226
+ButtonColor:#C706F8
+TitleColor:#ED61DE
+TitleBarColor:#010101
+ModuleColor:#EC8AEF
+MicColor:#E289E8
+BgColor:#060506
+BgOpacity:0.3642857
+TitleOpacity:0.23214285
 Rainbow:False
-BgColor:#1A1A1AFF
-BgOpacity:0.6
+Highlight:0.46666655;0.44444445;0.67222226
