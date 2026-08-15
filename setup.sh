@@ -85,40 +85,39 @@ while true; do
         2)
             echo "Aplicando configuración de IP Estática..."
             
-            # Detección robusta de Interfaz y Gateway
-            IFACE=$(ip route show default 2>/dev/null | awk '/default/ {print $5}')
-            [ -z "$IFACE" ] && IFACE=$(ip -o link show | awk -F': ' '$2 != "lo" {print $2; exit}')
+            # Obtener datos limpios sin saltos de línea extras
+            IFACE=$(ip route show default 2>/dev/null | awk '/default/ {print $5}' | head -n1)
+            [ -z "$IFACE" ] && IFACE=$(ip -o link show | awk -F': ' '$2 != "lo" {print $2; exit}' | tr -d ' ')
             
-            GATEWAY=$(ip route show default 2>/dev/null | awk '/default/ {print $3}')
+            GATEWAY=$(ip route show default 2>/dev/null | awk '/default/ {print $3}' | head -n1)
             
-            # Reobtener IP activa si CURRENT_IP está vacía
-            [ -z "$CURRENT_IP" ] || [ "$CURRENT_IP" = "Sin conexión" ] && CURRENT_IP=$(ip -o -4 addr show dev "$IFACE" 2>/dev/null | awk '{split($4,a,"/"); print a[1]}')
+            [ -z "$CURRENT_IP" ] || [ "$CURRENT_IP" = "Sin conexión" ] && CURRENT_IP=$(ip -o -4 addr show dev "$IFACE" 2>/dev/null | awk '{split($4,a,"/"); print a[1]}' | head -n1)
 
             if [ -z "$CURRENT_IP" ] || [ -z "$IFACE" ]; then
-                echo "Error: No se pudo detectar una interfaz o dirección IP válida."
+                echo "Error: No se pudo detectar una interfaz o IP válida."
                 sleep 2
                 continue
             fi
 
             sudo cp "$INTERFAZ_FILE" "${INTERFAZ_FILE}.bak"
 
-            # Escribir nueva configuración usando tee para evitar fallos de permisos/expansión
-            sudo tee "$INTERFAZ_FILE" > /dev/null <<EOF
-auto lo
-iface lo inet loopback
+            # Generar el archivo con formato estricto Debian/AntiX
+            {
+                echo "auto lo"
+                echo "iface lo inet loopback"
+                echo ""
+                echo "auto $IFACE"
+                echo "iface $IFACE inet static"
+                echo "    address $CURRENT_IP"
+                echo "    netmask 255.255.255.0"
+                [ -n "$GATEWAY" ] && echo "    gateway $GATEWAY"
+                echo "    dns-nameservers 8.8.8.8 1.1.1.1"
+            } | sudo tee "$INTERFAZ_FILE" > /dev/null
 
-auto $IFACE
-iface $IFACE inet static
-    address $CURRENT_IP
-    netmask 255.255.255.0
-    ${GATEWAY:+gateway $GATEWAY}
-    dns-nameservers 8.8.8.8 1.1.1.1
-EOF
-
-            # Reiniciar la interfaz de forma limpia
-            sudo ifdown --force $IFACE 2>/dev/null
-            sudo ip addr flush dev $IFACE
-            sudo ifup $IFACE
+            # Reiniciar red sin comandos conflictivos
+            sudo ifdown "$IFACE" 2>/dev/null
+            sudo ip addr flush "$IFACE" 2>/dev/null
+            sudo ifup "$IFACE"
             
             echo "¡IP Estática aplicada ($CURRENT_IP en $IFACE)!"
             sleep 2
