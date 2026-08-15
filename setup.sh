@@ -39,8 +39,7 @@ if [ "$(id -u)" -eq 0 ]; then
         echo -e "\n# Abrir una terminal con el menú de red en la pantalla de la VM\ndesktop-defaults-run-terminal --command \"$USER_HOME/menu_red.sh\" &" >> "$HLWM_CONFIG_DIR/autostart"
     fi
 
-    # 3. LIMPIEZA IMPORTANTE: Quitamos el script de ~/.bashrc si se había quedado ahí de antes,
-    # para evitar que te salte doble por SSH o que corrompa la consola normal.
+    # 3. LIMPIEZA IMPORTANTE: Quitamos el script de ~/.bashrc si se había quedado ahí de antes
     if [ -f "$USER_HOME/.bashrc" ]; then
         sed -i '/menu_red.sh/d' "$USER_HOME/.bashrc"
     fi
@@ -85,11 +84,26 @@ while true; do
             ;;
         2)
             echo "Aplicando configuración de IP Estática..."
-            sudo cp "$INTERFAZ_FILE" "${INTERFAZ_FILE}.bak"
-            IFACE=$(ip route show default | awk '{print $5}')
-            GATEWAY=$(ip route show default | awk '{print $3}')
             
-            sudo bash -c "cat <<EOF > $INTERFAZ_FILE
+            # Detección robusta de Interfaz y Gateway
+            IFACE=$(ip route show default 2>/dev/null | awk '/default/ {print $5}')
+            [ -z "$IFACE" ] && IFACE=$(ip -o link show | awk -F': ' '$2 != "lo" {print $2; exit}')
+            
+            GATEWAY=$(ip route show default 2>/dev/null | awk '/default/ {print $3}')
+            
+            # Reobtener IP activa si CURRENT_IP está vacía
+            [ -z "$CURRENT_IP" ] || [ "$CURRENT_IP" = "Sin conexión" ] && CURRENT_IP=$(ip -o -4 addr show dev "$IFACE" 2>/dev/null | awk '{split($4,a,"/"); print a[1]}')
+
+            if [ -z "$CURRENT_IP" ] || [ -z "$IFACE" ]; then
+                echo "Error: No se pudo detectar una interfaz o dirección IP válida."
+                sleep 2
+                continue
+            fi
+
+            sudo cp "$INTERFAZ_FILE" "${INTERFAZ_FILE}.bak"
+
+            # Escribir nueva configuración usando tee para evitar fallos de permisos/expansión
+            sudo tee "$INTERFAZ_FILE" > /dev/null <<EOF
 auto lo
 iface lo inet loopback
 
@@ -97,26 +111,42 @@ auto $IFACE
 iface $IFACE inet static
     address $CURRENT_IP
     netmask 255.255.255.0
-    gateway $GATEWAY
+    ${GATEWAY:+gateway $GATEWAY}
     dns-nameservers 8.8.8.8 1.1.1.1
-EOF"
-            sudo ifdown $IFACE && sudo ifup $IFACE
-            echo "¡IP Estática aplicada!"
+EOF
+
+            # Reiniciar la interfaz de forma limpia
+            sudo ifdown --force $IFACE 2>/dev/null
+            sudo ip addr flush dev $IFACE
+            sudo ifup $IFACE
+            
+            echo "¡IP Estática aplicada ($CURRENT_IP en $IFACE)!"
             sleep 2
             ;;
         3)
             echo "Removiendo configuración estática (DHCP)..."
-            IFACE=$(ip route show default | awk '{print $5}')
-            [ -z "$IFACE" ] && IFACE=$(awk '/iface/ {print $2}' $INTERFAZ_FILE | grep -v "lo" | head -n 1)
+            IFACE=$(ip route show default 2>/dev/null | awk '/default/ {print $5}')
+            [ -z "$IFACE" ] && IFACE=$(awk '/iface/ {print $2}' "$INTERFAZ_FILE" | grep -v "lo" | head -n 1)
 
-            sudo bash -c "cat <<EOF > $INTERFAZ_FILE
+            if [ -z "$IFACE" ]; then
+                echo "Error: No se detectó la interfaz a restablecer."
+                sleep 2
+                continue
+            fi
+
+            sudo tee "$INTERFAZ_FILE" > /dev/null <<EOF
 auto lo
 iface lo inet loopback
 
 auto $IFACE
 iface $IFACE inet dhcp
-EOF"
-            sudo ifdown $IFACE && sudo ifup $IFACE
+EOF
+
+            # Reiniciar la interfaz de forma limpia
+            sudo ifdown --force $IFACE 2>/dev/null
+            sudo ip addr flush dev $IFACE
+            sudo ifup $IFACE
+
             echo "¡Volviendo a DHCP!"
             sleep 2
             ;;
