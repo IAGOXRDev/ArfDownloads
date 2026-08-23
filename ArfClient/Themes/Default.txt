@@ -1,0 +1,11 @@
+Bg:000000FC
+TitleChroma:False
+TitleScroll:True
+Title1:FF9CF5FF
+Title2:FF0080FF
+BtnChroma:False
+BtnScroll:True
+Btn1:C700FFFF
+Btn2:00CBFEFF
+TxtTitle:000000FF
+TxtGlobal:FFFFFFFF
